@@ -29,6 +29,7 @@ There are also directives that link to the intro.js callbacks, namely `ng-intro-
 
 As with intro.js and angular-intro.js, this is under the [MIT license](https://github.com/iamdenny/angular-intro-plus.js/blob/master/LICENSE).
 
+Copyright (c) 2014 NAVER Corp.
 
 
 
