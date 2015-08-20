@@ -89,10 +89,11 @@ ngIntroDirective.directive('ngIntroPlusOptions', ['$timeout', '$parse', function
                 aelChildHelpIcons = [];
                 angular.forEach(htOptions.steps, function (currentItem, i) {
 
-                    var el = $(currentItem.element),
-                        offset = el.offset(),
-                        width = el.width(),
-                        height = el.height(),
+                    var el = $(currentItem.element).filter(':visible:first');
+
+                    var offset = el.offset() || {top: 0, left: 0},
+                        width = el.width() || 0,
+                        height = el.height() || 0,
                         newEl = $(htOptions.helpIcons || '<span class="glyphicon glyphicon-question-sign" style="position:absolute;color:#fff;font-size:24px;z-index:1000000;cursor:pointer;"></span>');
 
                     // @todo might be changed this to isVisible module
